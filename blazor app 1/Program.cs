@@ -1,4 +1,4 @@
-using blazor_app_1.Components;
+using blazorapp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

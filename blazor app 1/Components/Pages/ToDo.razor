@@ -3,9 +3,23 @@
 
 <h3>ToDo</h3>
 
-@* call on todoitem.cs *@
+
 @code {
+    //call op todo item
     private List<TodoItem> todos = new();
+
+
+    string newTodo = "";
+
+    //add fucntie om dingen toe te voegen aan todo list
+    void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo });
+            newTodo = string.Empty;
+        }
+    }
 }
 
 @*for each loop die door de todo list heen gaat en uitprint*@
@@ -20,8 +34,3 @@
 <input />
 <button>Add todo</button>
 
-@*maakt nieuwe todo list*@
-@code {
-    private List<TodoItem> todos = new();
-    string newTodo = "";
-}
