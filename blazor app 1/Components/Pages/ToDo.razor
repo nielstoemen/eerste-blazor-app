@@ -1,0 +1,27 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+
+<h3>ToDo</h3>
+
+@* call on todoitem.cs *@
+@code {
+    private List<TodoItem> todos = new();
+}
+
+@*for each loop die door de todo list heen gaat en uitprint*@
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
+@*input om dingen aan todo toe te voegen*@
+<input />
+<button>Add todo</button>
+
+@*maakt nieuwe todo list*@
+@code {
+    private List<TodoItem> todos = new();
+    string newTodo = "";
+}
